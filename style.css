@@ -1,0 +1,68 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #f0f0f0; /* Default background */
+    transition: background-color 0.3s ease; /* Smooth transition for background color changes */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* CSS Transition for the Button */
+.animated-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transition for background and size */
+}
+
+.animated-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+/* CSS Animation for the Image */
+.image-container {
+    margin-top: 20px;
+    position: relative; /* Needed for absolute positioning of the button if desired */
+}
+
+#animatedImage {
+    width: 200px;
+    opacity: 0; /* Initially hidden */
+}
+
+.fade-in-move {
+    animation: fadeInMove 1s ease-in-out forwards; /* Apply the animation */
+}
+
+@keyframes fadeInMove {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+#triggerAnimation {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
